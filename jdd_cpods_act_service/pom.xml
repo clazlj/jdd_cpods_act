@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>jdd_cpods_act</artifactId>
+        <groupId>com.jdd</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>jdd_cpods_act_service</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.jdd</groupId>
+            <artifactId>jdd-api-spring-boot-starter</artifactId>
+            <version>1.1-sw-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jdd</groupId>
+            <artifactId>jdd-db-spring-boot-starter</artifactId>
+            <version>1.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jdd</groupId>
+            <artifactId>jdd-core-spring-boot-starter</artifactId>
+            <version>1.1-sw-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jdd</groupId>
+            <artifactId>jdd-swagger-spring-boot-starter</artifactId>
+            <version>1.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jdd</groupId>
+            <artifactId>jdd-dubbo-spring-boot-starter</artifactId>
+            <version>1.1-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.jdd</groupId>
+            <artifactId>jdd-nacos-spring-boot-starter</artifactId>
+            <version>1.1-SNAPSHOT</version>
+            <type>pom</type>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.ftl</include>
+                </includes>
+            </resource>
+        </resources>
+    </build>
+
+</project>

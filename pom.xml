@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.jdd</groupId>
+    <artifactId>jdd_cpods_act</artifactId>
+    <packaging>pom</packaging>
+    <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>jdd_cpods_act_service</module>
+        <module>jdd_cpods_act_admin</module>
+        <module>jdd_cpods_act_api</module>
+        <module>jdd_cpods_act_rpc</module>
+        <module>jdd_cpods_act_task</module>
+    </modules>
+
+    <properties>
+        <MAVEN_OPTS>-Xmx512m</MAVEN_OPTS>
+        <project.environment>1.0-SNAPSHOT</project.environment>
+        <distribution.repository.url>http://172.16.248.113:8081/repository</distribution.repository.url>
+    </properties>
+
+    <profiles>
+        <profile>
+            <id>test</id>
+            <properties>
+                <environment>test</environment>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>dev</id>
+            <properties>
+                <environment>dev</environment>
+            </properties>
+        </profile>
+
+        <profile>
+            <id>prod</id>
+            <properties>
+                <environment>prod</environment>
+            </properties>
+        </profile>
+    </profiles>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <url>${distribution.repository.url}/maven-snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>releases</id>
+            <url>${distribution.repository.url}/maven-releases</url>
+        </repository>
+    </distributionManagement>
+
+</project>

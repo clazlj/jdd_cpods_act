@@ -1,0 +1,27 @@
+server:
+  port: 80
+
+nacos:
+  config:
+    namespace: 6f6dbc1d-8958-47e0-8619-9507dd535c5c
+    server-addr: nacos-test.jddods.com:80
+
+logging:
+  level:
+    com.jdd.jdd_cpods_act: info
+  elk:
+    appName: jdd_cpods_act_admin
+    redis:
+      host: 172.16.248.236
+      port: 6379
+      auth:
+      key: o2o_log_list
+      prefix: ACT
+
+swagger:
+  base:
+    package: com.jdd.cpods.recom.api.controller
+
+spring:
+  jpa:
+    open-in-view: false
